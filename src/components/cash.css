@@ -1,22 +1,65 @@
 .cash {
     background-color: rgb(236, 236, 236);
-    height: 80vh;
+    /* height: 90vh; */
     max-width: 500px;
     margin: auto;
     width: 90%;
     border-radius: 10px;
-    margin-top: 32px;
+    margin-top: 16px;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container-input {
     display: flex;
     justify-content: space-between;
+
+}
+
+.container-input+.container-input {
+    margin-top: 8px;
+}
+
+.container-input label {
+    flex-basis: 50%;
+    align-self: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+input {
+    padding: 4px 8px;
+    border: 2px solid rgb(169, 169, 169);
+    background-color: rgb(234, 234, 234);
+    border-radius: 4px;
+    height: 32px;
+    font-size: 16px;
+    font-weight: 600;
+    max-width: 25%;
+}
+
+input:focus {
+    outline: hotpink 2px solid;
+    border-radius: 4px;
+}
+
+.container-input span,
+.container-input input {
+    flex-basis: 25%;
+    align-self: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.container-input span {
+    text-align: right;
 }
 
 .total {
     text-align: right;
-    border-top: 2px solid black;
-    margin-top: 16px;
+    border-top: 2px solid rgb(169, 169, 169);
+    margin-top: 8px;
     padding-top: 8px;
 }

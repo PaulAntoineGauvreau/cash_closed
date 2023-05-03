@@ -10,11 +10,14 @@ export default function Cash() {
     const [cash10, setCash10] = useState(0);
     const [cash20, setCash20] = useState(0);
     const [cash100, setCash100] = useState(0);
+    const [transSyst, setTransSyst] = useState(0);
+    const [tipSyst, setTipSys] = useState(0);
 
 
     const onChangeHandler = e => {
-
-        if(e.target.name === 'basicCash') setBasicCash(e.target.value) 
+        if(e.target.name === 'tipSyst') setTipSys(e.target.value * 1) 
+        if(e.target.name === 'transSyst') setTransSyst(e.target.value * 1) 
+        if(e.target.name === 'basicCash') setBasicCash(e.target.value * 1) 
         if(e.target.name === '0.25') setCash025(e.target.value * 0.25)
         if(e.target.name === '1') setCash1(e.target.value * 1)
         if(e.target.name === '2') setCash2(e.target.value * 2)
@@ -37,7 +40,27 @@ export default function Cash() {
                     />
                 <span>{basicCash}</span>
             </div>
-            <div className="line"></div>
+            <div className='container-input'>
+                <label htmlFor="transSyst">Transaction syst. CASH</label>
+                <input 
+                    type="number"
+                    name="transSyst"
+                    onChange={onChangeHandler}
+                    value={transSyst}
+                    />
+                <span>{transSyst}</span>
+            </div>
+            <div className='container-input'>
+                <label htmlFor="tipSyst">Pourboire syst.</label>
+                <input 
+                    type="number"
+                    name="tipSyst"
+                    onChange={onChangeHandler}
+                    value={tipSyst}
+                    />
+                <span>{tipSyst}</span>
+            </div>
+
             <div className='container-input'>
                 <label htmlFor="0.25">0.25</label>
                 <input 
@@ -108,8 +131,29 @@ export default function Cash() {
                     />
                 <span>{cash100}</span>
             </div>
-            <div className="total">Total : {cash025 + cash1 + cash2 + cash5 + cash10 + cash20 + cash100} $</div>
-            <div className="total">Dépot : {cash025 + cash1 + cash2 + cash5 + cash10 + cash20 + cash100 - basicCash} $</div>
+            {cash025 + cash1 + cash2 + cash5 + cash10 + cash20 + cash100 ?
+                <div className="total">Total : {cash025 + cash1 + cash2 + cash5 + cash10 + cash20 + cash100} $</div>
+                :
+                <div className="total">Total : 0 $</div>
+            }
+           {cash025 + cash1 + cash2 + cash5 + cash10 + cash20 + cash100 - basicCash - tipSyst ?
+                <div className="total">Dépot : {cash025 + cash1 + cash2 + cash5 + cash10 + cash20 + cash100 - basicCash - tipSyst} $</div> 
+                :
+                <div className="total">Dépot : 0 $</div> 
+           }
+           {(cash025 + cash1 + cash2 + cash5 + cash10 + cash20 + cash100 - transSyst) + tipSyst ?
+            <div className="total">Tip : {(cash025 + cash1 + cash2 + cash5 + cash10 + cash20 + cash100 - transSyst) + tipSyst } $</div> 
+            :
+            <div className="total">Tip : 0 $</div> 
+           }
+           {basicCash ?
+            <div className="total">Laisser dans la caisse : {basicCash} $</div>
+            :
+            <div className="total">Laisser dans la caisse : 0 $</div>
+           }
+            
+
+            
       </div>
     );
   }

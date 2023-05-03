@@ -11,8 +11,8 @@ export default function App() {
   return (
     <div className="App">
       <header className="App-header">
-          <h1>Tu as presque terminé!</h1>
-          <time dateTime="2008-02-14 20:00">{`${dd} | ${mm} | ${yyyy}`}</time>
+          <h1>Tu as presque terminé : <time dateTime={`${dd}-${mm}-${yyyy}`}>{`${dd} | ${mm} | ${yyyy}`}</time> !</h1>
+          
       </header>
       <Cash/>
     </div>
