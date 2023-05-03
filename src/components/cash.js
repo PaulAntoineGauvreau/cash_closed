@@ -3,15 +3,15 @@ import { useState } from 'react';
 
 export default function Cash() {
     const [basicCash, setBasicCash] = useState(200);
-    const [cash025, setCash025] = useState(0);
-    const [cash1, setCash1] = useState(0);
-    const [cash2, setCash2] = useState(0);
-    const [cash5, setCash5] = useState(0);
-    const [cash10, setCash10] = useState(0);
-    const [cash20, setCash20] = useState(0);
-    const [cash100, setCash100] = useState(0);
-    const [transSyst, setTransSyst] = useState(0);
-    const [tipSyst, setTipSys] = useState(0);
+    const [cash025, setCash025] = useState();
+    const [cash1, setCash1] = useState();
+    const [cash2, setCash2] = useState();
+    const [cash5, setCash5] = useState();
+    const [cash10, setCash10] = useState();
+    const [cash20, setCash20] = useState();
+    const [cash100, setCash100] = useState();
+    const [transSyst, setTransSyst] = useState();
+    const [tipSyst, setTipSys] = useState();
 
 
     const onChangeHandler = e => {
@@ -32,103 +32,202 @@ export default function Cash() {
       <div className="cash">
             <div className='container-input'>
                 <label htmlFor="basicCash">Montant à laisser dans la caisse</label>
-                <input 
-                    type="number"
-                    name="basicCash"
-                    onChange={onChangeHandler}
-                    value={basicCash}
+                { basicCash ?
+                    <input 
+                        type="number"
+                        name="basicCash"
+                        onChange={onChangeHandler}
+                        value={basicCash}
                     />
+                    :
+                    <input 
+                        type="number"
+                        name="basicCash"
+                        onChange={onChangeHandler}
+                        value=""
+                    />
+                }
+
                 <span>{basicCash}</span>
             </div>
             <div className='container-input'>
                 <label htmlFor="transSyst">Transaction syst. CASH</label>
-                <input 
+                {transSyst ?
+                    <input 
+                        type="number"
+                        name="transSyst"
+                        onChange={onChangeHandler}
+                        value={transSyst}
+                    />
+                    :
+                    <input 
                     type="number"
                     name="transSyst"
                     onChange={onChangeHandler}
-                    value={transSyst}
-                    />
+                    value=""
+                />
+                }
+       
                 <span>{transSyst}</span>
             </div>
             <div className='container-input'>
                 <label htmlFor="tipSyst">Pourboire syst.</label>
+                { tipSyst ?
+
                 <input 
                     type="number"
                     name="tipSyst"
                     onChange={onChangeHandler}
                     value={tipSyst}
+                />
+            
+                :
+                    <input 
+                        type="number"
+                        name="tipSyst"
+                        onChange={onChangeHandler}
+                        value=''
                     />
-                <span>{tipSyst}</span>
+                        }
+            <span>{tipSyst}</span>
             </div>
 
             <div className='container-input'>
                 <label htmlFor="0.25">0.25</label>
-                <input 
-                    type="number"
-                    name="0.25"
-                    onChange={onChangeHandler}
-                    value={cash025 / 0.25}
+                { cash025 ?
+                    <input 
+                        type="number"
+                        name="0.25"
+                        onChange={onChangeHandler}
+                        value={cash025 / 0.25}
                     />
+                    :
+                    <input 
+                        type="number"
+                        name="0.25"
+                        onChange={onChangeHandler}
+                        value=""
+                    />
+                }
+              
                 <span>{cash025}</span>
             </div>
             <div className='container-input'>
                 <label htmlFor="1">1</label>
-                <input 
-                    type="number"
-                    name="1"
-                    onChange={onChangeHandler}
-                    value={cash1 / 1}
+                { cash1 ?
+                    <input 
+                        type="number"
+                        name="1"
+                        onChange={onChangeHandler}
+                        value={cash1 / 1}
                     />
+                    :
+                    <input 
+                        type="number"
+                        name="1"
+                        onChange={onChangeHandler}
+                        value=""
+                    />
+                }
                 <span>{cash1}</span>
             </div>
             <div className='container-input'>
                 <label htmlFor="2">2</label>
-                <input 
-                    type="number"
-                    name="2"
-                    onChange={onChangeHandler}
-                    value={cash2 / 2}
+                { cash2 ?
+                    <input 
+                        type="number"
+                        name="2"
+                        onChange={onChangeHandler}
+                        value={cash2 / 2}
                     />
+                    :
+                    <input 
+                        type="number"
+                        name="2"
+                        onChange={onChangeHandler}
+                        value=""
+                    />
+                }
+                
                 <span>{cash2}</span>
             </div>
             <div className='container-input'>
                 <label htmlFor="5">5</label>
-                <input 
-                    type="number"
-                    name="5"
-                    onChange={onChangeHandler}
-                    value={cash5 / 5}
+                {cash5  ?
+                    <input 
+                        type="number"
+                        name="5"
+                        onChange={onChangeHandler}
+                        value={cash5 / 5}
                     />
+                    : 
+                    <input 
+                        type="number"
+                        name="5"
+                        onChange={onChangeHandler}
+                        value=''
+                    />
+                }
+                
                 <span>{cash5}</span>
             </div>
             <div className='container-input'>
                 <label htmlFor="10">10</label>
-                <input 
-                    type="number"
-                    name="10"
-                    onChange={onChangeHandler}
-                    value={cash10 / 10}
+                { cash10 ?
+                    <input 
+                        type="number"
+                        name="10"
+                        onChange={onChangeHandler}
+                        value={cash10 / 10}
                     />
+                    : 
+                    <input 
+                        type="number"
+                        name="10"
+                        onChange={onChangeHandler}
+                        value=""
+                    />
+                }
+                
                 <span>{cash10}</span>
             </div>
             <div className='container-input'>
                 <label htmlFor="20">20</label>
-                <input 
-                    type="number"
-                    name="20"
-                    onChange={onChangeHandler}
-                    value={cash20 / 20}
+                { cash20 ?
+                    <input 
+                        type="number"
+                        name="20"
+                        onChange={onChangeHandler}
+                        value={cash20 / 20}
                     />
+                    :
+                    <input 
+                        type="number"
+                        name="20"
+                        onChange={onChangeHandler}
+                        value=""
+                    />
+                }
                 <span>{cash20}</span>
             </div>
             <div className='container-input'>
                 <label htmlFor="100">100</label>
-                <input 
-                    type="number"
-                    name="100"
-                    onChange={onChangeHandler}
-                    value={cash100 / 100}
+                { cash100 ?
+                    <input 
+                        type="number"
+                        name="100"
+                        onChange={onChangeHandler}
+                        value={cash100 / 100}
                     />
+                    :
+                    <input 
+                        type="number"
+                        name="100"
+                        onChange={onChangeHandler}
+                        value=""
+                    />
+                }
+              
                 <span>{cash100}</span>
             </div>
             {cash025 + cash1 + cash2 + cash5 + cash10 + cash20 + cash100 ?
