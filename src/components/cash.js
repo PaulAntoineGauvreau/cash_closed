@@ -151,9 +151,6 @@ export default function Cash() {
             :
             <div className="total">Laisser dans la caisse : 0 $</div>
            }
-            
-
-            
       </div>
     );
   }
