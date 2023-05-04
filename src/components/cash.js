@@ -36,6 +36,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="basicCash"
+                        id='basicCash'
                         onChange={onChangeHandler}
                         value={basicCash}
                     />
@@ -43,6 +44,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="basicCash"
+                        id='basicCash'
                         onChange={onChangeHandler}
                         value=""
                     />
@@ -56,6 +58,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="transSyst"
+                        id='transSyst'
                         onChange={onChangeHandler}
                         value={transSyst}
                     />
@@ -63,6 +66,7 @@ export default function Cash() {
                     <input 
                     type="number"
                     name="transSyst"
+                    id='transSyst'
                     onChange={onChangeHandler}
                     value=""
                 />
@@ -77,6 +81,7 @@ export default function Cash() {
                 <input 
                     type="number"
                     name="tipSyst"
+                    id='tipSyst'
                     onChange={onChangeHandler}
                     value={tipSyst}
                 />
@@ -85,6 +90,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="tipSyst"
+                        id='tipSyst'
                         onChange={onChangeHandler}
                         value=''
                     />
@@ -98,6 +104,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="0.25"
+                        id='0.25'
                         onChange={onChangeHandler}
                         value={cash025 / 0.25}
                     />
@@ -105,6 +112,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="0.25"
+                        id='0.25'
                         onChange={onChangeHandler}
                         value=""
                     />
@@ -118,6 +126,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="1"
+                        id='1'
                         onChange={onChangeHandler}
                         value={cash1 / 1}
                     />
@@ -125,6 +134,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="1"
+                        id='1'
                         onChange={onChangeHandler}
                         value=""
                     />
@@ -137,6 +147,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="2"
+                        id='2'
                         onChange={onChangeHandler}
                         value={cash2 / 2}
                     />
@@ -144,6 +155,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="2"
+                        id='2'
                         onChange={onChangeHandler}
                         value=""
                     />
@@ -157,6 +169,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="5"
+                        id='5'
                         onChange={onChangeHandler}
                         value={cash5 / 5}
                     />
@@ -164,6 +177,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="5"
+                        id='5'
                         onChange={onChangeHandler}
                         value=''
                     />
@@ -177,6 +191,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="10"
+                        id='10'
                         onChange={onChangeHandler}
                         value={cash10 / 10}
                     />
@@ -184,6 +199,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="10"
+                        id='10'
                         onChange={onChangeHandler}
                         value=""
                     />
@@ -197,6 +213,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="20"
+                        id='20'
                         onChange={onChangeHandler}
                         value={cash20 / 20}
                     />
@@ -204,6 +221,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="20"
+                        id='20'
                         onChange={onChangeHandler}
                         value=""
                     />
@@ -216,6 +234,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="100"
+                        id='100'
                         onChange={onChangeHandler}
                         value={cash100 / 100}
                     />
@@ -223,6 +242,7 @@ export default function Cash() {
                     <input 
                         type="number"
                         name="100"
+                        id='100'
                         onChange={onChangeHandler}
                         value=""
                     />
